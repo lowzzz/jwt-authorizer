@@ -62,6 +62,9 @@ pub enum AuthError {
     /// Used when a claim extractor is used and no authorization layer is in front the handler
     #[error("No Authorizer Layer")]
     NoAuthorizerLayer(),
+
+    #[error("Failed to create HTTP client: {0}")]
+    ClientBuildError(#[from] reqwest::Error),
 }
 
 fn response_wwwauth(status: StatusCode, bearer: &str) -> Response<Body> {
@@ -189,6 +192,10 @@ impl IntoResponse for AuthError {
                 debug!("AuthErrors::NoAuthorizerLayer");
                 // TODO: should it be a standard error?
                 response_wwwauth(StatusCode::UNAUTHORIZED, "error=\"no_authorizer_layer\"")
+            }
+            AuthError::ClientBuildError(_) => {
+                debug!("AuthErrors::ClientBuildError");
+                response_500()
             }
         }
     }

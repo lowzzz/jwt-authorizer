@@ -152,7 +152,9 @@ impl KeyStore {
     }
 
     async fn refresh(&mut self, key_url: &Url, qparam: &[(&str, &str)]) -> Result<(), AuthError> {
-        reqwest::Client::new()
+        reqwest::Client::builder()
+            .use_rustls_tls()
+            .build()?
             .get(key_url.as_ref())
             .query(qparam)
             .send()
