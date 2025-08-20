@@ -1,9 +1,9 @@
 [package]
 name = "rusttls-jwt-authorizer"
 description = "jwt authorizer fork with forced rusttls"
-version = "0.15.0"
+version = "0.15.1"
 edition = "2021"
-authors = ["cduvray <c_duvray@proton.me>"]
+authors = ["cduvray <c_duvray@proton.me>", "lowzzz <leontigor@gmail.com>"]
 license = "MIT"
 readme = "docs/README.md"
 repository = "https://github.com/lowzzz/jwt-authorizer"

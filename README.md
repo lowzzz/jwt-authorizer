@@ -1,6 +1,8 @@
 # jwt-authorizer
 
-JWT authorizer Layer for Axum.
+This crate is a maintained fork of jwt-authorizer.
+The original work was created by cduvray (c_duvray@proton.me>).
+Licensed under MIT.
 
 [![Build status](https://github.com/cduvray/jwt-authorizer/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/tokio-rs/cduvray/jwt-authorizer/workflows/ci.yml)
 [![Crates.io](https://img.shields.io/crates/v/jwt-authorizer)](https://crates.io/crates/jwt-authorizer)
