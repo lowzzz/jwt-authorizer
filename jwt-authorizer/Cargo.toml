@@ -1,12 +1,12 @@
 [package]
-name = "jwt-authorizer"
-description = "jwt authorizer middleware for axum and tonic"
+name = "rusttls-jwt-authorizer"
+description = "jwt authorizer fork with forced rusttls"
 version = "0.15.0"
 edition = "2021"
 authors = ["cduvray <c_duvray@proton.me>"]
 license = "MIT"
 readme = "docs/README.md"
-repository = "https://github.com/cduvray/jwt-authorizer"
+repository = "https://github.com/lowzzz/jwt-authorizer"
 keywords = ["jwt", "axum", "authorisation", "jwks"]
 
 [dependencies]
